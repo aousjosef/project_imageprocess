@@ -1,0 +1,81 @@
+.product-info-container {
+  //  border: 3px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: white;
+  //genereard shadow
+  box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  max-width: 90rem;
+  width: 96%;
+
+  margin: 2rem;
+  .image-container {
+    margin: 0.6rem;
+    //   border: 3px solid red;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      //  border: 3px solid blue;
+      max-width: 750px;
+      margin: auto;
+      border-radius: 0.5rem;
+    }
+  }
+
+  //space around för att skilja dem från varandra med jämnavstånd
+  .info-buy-container {
+    // border: 3px solid green;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      font-size: 2rem;
+      color: white;
+      background-color: red;
+      border: 0px;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+  }
+
+  .youtube-container {
+    flex: 100%;
+    // border: 3px solid black;
+    text-align: center;
+    padding: 1.5rem 0;
+
+    iframe {
+      width: 67%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-info-container {
+    flex-direction: column;
+  }
+}

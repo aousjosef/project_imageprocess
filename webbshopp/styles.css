@@ -1,0 +1,150 @@
+/* NOTE: border-box: inget utsträcker sig utanför gränsen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #faf3f3;
+}
+header {
+  height: 70px;
+  background-color: #22292f;
+  padding: 10px 0;
+}
+
+/* NOTE: MOBIL FÖRST */
+/* NOTE: display flex för att ta upp all plats. justify-content för att stretcha */
+.menu-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 50px;
+}
+.menu-icon {
+  font-size: 2.2em;
+  color: #ffffff;
+  line-height: 50px;
+}
+
+nav {
+  position: absolute;
+  background-color: #3d4852;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+/* NOTE: inline-block: box i linje */
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.3rem;
+  color: #dae1e7;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: red;
+}
+
+/* NOTE: gömmer checkbox */
+#checkbox {
+  display: none;
+}
+
+/* NOTE: när checkbox= checked, height av nav ul: expanderar från 0 till 200px */
+#checkbox:checked ~ nav ul {
+  max-height: 350px;
+  padding: 15px 0;
+  transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+  nav {
+    position: relative;
+    top: -10px;
+    background-color: transparent;
+  }
+  nav ul {
+    max-height: 70px;
+    padding: 15px 0;
+    text-align: right;
+  }
+  nav ul li {
+    display: inline-flex;
+    padding-left: 20px;
+  }
+}
+
+.erbjudande {
+  margin: 20px;
+  text-align: center;
+}
+
+.erbjudande img {
+  width: 100%;
+}
+
+
+
+/* NOTE: FOOTER */
+
+footer {
+  background: #22292f;
+  padding: 90px 0;
+}
+
+.logo-footer {
+  width: 70px;
+}
+
+.footer-container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  color: #001a21;
+  margin: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #dae1e7;
+}
+
+.social-media a:hover {
+  color: red;
+}
+
+.white-text {
+  color: #dae1e7;
+}

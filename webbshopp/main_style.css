@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* NOTE: border-box: inget utsträcker sig utanför gränsen */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #faf3f3;
+}
+
+header {
+  height: 70px;
+  background-color: #22292f;
+  padding: 10px 0;
+}
+
+/* NOTE: MENY - MOBIL VERSION */
+/* NOTE: display flex för att ta upp all plats. justify-content för att stretcha */
+.menu-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 50px;
+  pointer-events: auto;
+}
+
+.menu-icon {
+  font-size: 2.2em;
+  color: white;
+  padding: 10px;
+}
+
+nav {
+  position: absolute;
+  background-color: #3d4852;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+nav ul li a {
+  /* NOTE: inline-block: box i linje */
+  display: block;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  color: #dae1e7;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+nav ul li a:focus {
+  color: red;
+}
+
+#checkbox {
+  /* NOTE: gömmer checkbox */
+  display: none;
+}
+
+#checkbox:checked ~ nav ul {
+  /* NOTE: när checkbox= checked, height av nav ul: expanderar från 0 till 300px */
+  max-height: 300px;
+  padding: 15px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+  .link-test {
+    z-index: 2;
+  }
+  .menu-icon {
+    display: none;
+  }
+  nav {
+    top: -10px;
+    background-color: transparent;
+  }
+  nav ul {
+    max-height: 70px;
+    padding: 20px 0;
+    text-align: right;
+  }
+  nav ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-left: 20px;
+  }
+}
+
+.erbjudande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.erbjudande img {
+  width: 70rem;
+  max-width: 100%;
+}
+
+/* PRODUCT LIST CSS*/
+/* note: Grid för att skapa jämna cardbox som är flexibla
+auto fill columns så att den anpassar sig efter storleken av container där minimum är 25 rem och maximum är hela raden
+
+*/
+.center-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center-all .main-content-div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  max-width: 80rem;
+  width: 96%;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+.center-all .main-content-div a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.center-all .main-content-div .box-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center horizontally */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* center vertically */
+  background-color: white;
+  box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 1px 8px 21px -2px rgba(0, 0, 0, 0.58);
+  border-radius: 0.6rem;
+}
+
+.center-all .main-content-div .box-card .product-title {
+  width: 80%;
+  text-align: center;
+  border-top: 1px solid black;
+  padding: 1rem 0;
+}
+
+.center-all .main-content-div .box-card .product-price {
+  font-size: 1.8rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: #001a21;
+  color: white;
+}
+
+.center-all .main-content-div .box-card img {
+  max-width: 90%;
+  height: auto;
+  padding: 1rem;
+}
+
+.center-all form {
+  max-width: 82rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+.center-all form input {
+  width: 90%;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.center-all form button {
+  font-size: 1.5rem;
+  padding: 0rem 0.5rem;
+  border-radius: 0.4rem;
+}
+
+/* NOTE: FOOTER */
+footer {
+  background: #22292f;
+  padding: 90px 0;
+}
+
+.logo-footer {
+  width: 70px;
+}
+
+.footer-container {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  color: #001a21;
+  margin: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #dae1e7;
+}
+
+.social-media a:hover {
+  color: red;
+}
+
+.white-text {
+  color: #dae1e7;
+}
+/*# sourceMappingURL=main_style.css.map */

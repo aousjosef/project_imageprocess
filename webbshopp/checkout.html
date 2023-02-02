@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main_style.css" />
+  <link rel="stylesheet" href="checkout_style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/loading.gif">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <title>PerfumeShop - Kassa</title>
+
+</head>
+
+<body>
+
+  <!-- NOTE: Navmeny -->
+  <header>
+    <div class="menu-wrap">
+      <a class="link-test" href="index.html"><img src="media/logo.png" class="logo-img" alt="Logo" /></a>
+      <!-- NOTE: checkbox nödvändig för att göra hamburgare meny klickbar mha html/css, iställt för JS -->
+      <input type="checkbox" id="checkbox" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Startsida</a></li>
+          <li><a href="products.html">Produkter</a></li>
+          <li><a href="aboutus.html">Om oss</a></li>
+          <li><a href="checkout.html" class="fas fa-shopping-cart"></a></li>
+        </ul>
+      </nav>
+      <!-- NOTE: icon från fontawosome -->
+      <label for="checkbox">
+        <i class="fa fa-bars menu-icon"></i>
+      </label>
+    </div>
+  </header>
+
+
+
+
+  <div class="main-container">
+
+
+    <div class="product-list-main-container">
+
+      <table>
+
+        <tr>
+          <th>Produkt</th>
+          <th>Namn</th>
+          <th>Antal</th>
+          <th>Pris</th>
+        </tr>
+
+        <tr>
+          <td><a href="media/pr1.webp" data-lightbox="Dior Sauvage Perfume" data-title="Dior Sauvage Perfume"><img
+                src="media/pr1.webp" alt="">
+            </a></td>
+          <td>Dior Sauvage Perfume</td>
+          <td> <input type="number" value="1"></td>
+          <td>899 SEK</td>
+        </tr>
+
+        <tr>
+          <td> <a href="media/pr2.webp" data-lightbox="Diesel Parfume" data-title="Diesel Parfume"><img
+                src="media/pr2.webp" alt="">
+            </a></td>
+          <td>Diesel Parfume</td>
+          <td> <input type="number" value="1"></td>
+          <td>699 SEK</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="media/pr3.webp" data-lightbox="ZLATAN Sport Perfume" data-title="ZLATAN Sport Perfume"><img
+                src="media/pr3.webp" alt="">
+            </a>
+          </td>
+          <td>ZLATAN Sport Perfume</td>
+          <td> <input type="number" value="1"></td>
+          <td>499 SEK</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+
+
+    <div class="total-price-main-container">
+
+
+
+
+      <div class="container---">
+        <form>
+          <label for="name">Namn</label>
+
+          <input type="text" id="name" name="name">
+
+          <label for="address">Adress</label>
+
+          <input type="text" id="address" name="address">
+
+          <label for="phone">Mobilnummer</label>
+
+          <input type="tel" id="phone" name="phone">
+
+          <label for="email">Mejl</label>
+          <input type="email" id="email" name="email">
+
+          <input class="buy-btn" type="submit" value="BETALA">
+
+        </form>
+      </div>
+
+      <h1>Total</h1>
+      <h2>2079 SEK</h2>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="left-col">
+        <img class="logo-footer" src="media/logo.png" alt="logo" />
+        <div class="social-media">
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-twitter"></i></a>
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+          <a href="#"> <i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="rights-text white-text">© 2023 Created By Aous Josef</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"
+    integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</body>
+
+</html>
